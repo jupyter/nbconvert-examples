@@ -1,0 +1,15 @@
+---
+
+notebook1.ipynb:
+  templates:
+    - template: basichtml
+      filters:
+        - rm_spaces
+      transformers: [ExtractFigures]
+
+notebook2.ipynb:
+  templates:
+    - template: basichtml
+      filters:
+        - rm_spaces
+      transformers: [ExtractFigures]
