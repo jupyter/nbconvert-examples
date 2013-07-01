@@ -3,13 +3,13 @@
 notebook1.ipynb:
   templates:
     - template: basichtml
-      filters:
-        - rm_spaces
+      filters: [myfilters.filter1]
       transformers: [ExtractFigures]
 
 notebook2.ipynb:
   templates:
-    - template: basichtml
-      filters:
-        - rm_spaces
-      transformers: [ExtractFigures]
+    - template: sphinx_manual
+      transformers:
+        - SphinxTransformer:
+            author: Brian Granger
+            enabled: true
