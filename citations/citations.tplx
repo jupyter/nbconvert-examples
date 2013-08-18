@@ -1,0 +1,15 @@
+((*- extends 'sphinx.tplx' -*))
+
+((* set parentdocumentclass = 'article' *))
+((* set documentclass = 'howto' *))
+
+((*- block markdowncell scoped-*))
+((( cell.source | parse_citation | markdown2latex )))
+((*- endblock markdowncell -*))
+
+
+((* block bodyEnd *))
+\bibliographystyle{unsrt}
+\bibliography{ipython}
+((( super () )))
+((* endblock bodyEnd *))
