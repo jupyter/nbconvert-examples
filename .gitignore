@@ -35,3 +35,9 @@ nosetests.xml
 .pydevproject
 
 .ipynb_checkpoints
+*.aux
+*.bbl
+*.blg
+*.idx
+*.log
+*.out
