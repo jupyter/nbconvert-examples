@@ -1,9 +1,9 @@
-from IPython.nbconvert.transformers import *
+from IPython.nbconvert.preprocessors import *
 
-class CheeseTransformer(Transformer):
-    """docstring for CheeseTransformer"""
+class CheesePreprocessor(Preprocessor):
+    """docstring for CheesePreprocessor"""
 
-    def transform_cell(self, cell, resources, index):
+    def preprocess_cell(self, cell, resources, index):
         """
         Adds bold 'cheese' to the start of every markdown cell.
         """
