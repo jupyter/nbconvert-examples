@@ -3,12 +3,12 @@
 The latex templates support 6 cell styles by default.  All 6 can be used by creating a custom template.  This directory contains an example of how to do this.  To change what cell style is selected, edit *use_cell_style.tplx*.
 
 Available styles:
-- ipython : "ipython_style.tplx" (default)
-- black & white ipython : "bw_ipython_style.tplx"
-- python : "python_style.tplx"
-- black & white python : "bw_python_style.tplx"
-- notebook : "notebook_style.tplx"
-- simple : "simple_style.tplx"
+- ipython : "style_ipython.tplx" (default)
+- black & white ipython : "style_bw_ipython.tplx"
+- python : "style_python.tplx"
+- black & white python : "style_bw_python.tplx"
+- notebook : "style_notebook.tplx"
+- simple : "style_simple.tplx"
 
 ---------------------------------------------------------
 
