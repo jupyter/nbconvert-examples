@@ -4,4 +4,3 @@ c = get_config()
 c.NbConvertApp.notebooks = ['Tools for the lifecycle of computational research.ipynb']
 c.NbConvertApp.export_format = 'latex'
 c.Exporter.template_file = 'citations'
-c.SphinxTransformer.author = 'Fernando Perez and Brian E. Granger'
