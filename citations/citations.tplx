@@ -1,5 +1,9 @@
 ((*- extends 'latex_article.tplx' -*))
 
+((* block author *))
+\author{Fernando Perez and Brian E. Granger}
+((* endblock author *))
+
 ((* block bibliography *))
 \bibliographystyle{unsrt}
 \bibliography{ipython}

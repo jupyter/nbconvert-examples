@@ -4,4 +4,4 @@ c = get_config()
 c.NbConvertApp.notebooks = ['*.ipynb']
 c.NbConvertApp.export_format = 'latex'
 c.Exporter.template_file = 'article'
-c.NbConvertApp.post_processor_class = 'PDF'
+c.NbConvertApp.postprocessor_class = 'PDF'

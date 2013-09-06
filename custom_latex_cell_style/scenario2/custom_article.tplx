@@ -1,0 +1,29 @@
+
+% Tell the templating engine to just inherit from the latex_base instead of a 
+% template style.  If you want to inherit from a specific cell style, you
+% must specify that cell style here.
+((* set cell_style = 'latex_base.tplx' *))
+
+% Tell the templating engine what output template we want to use.
+((* extends 'latex_article.tplx' *))
+
+
+%===============================================================================
+% My custom output style
+%===============================================================================
+% A custom cell style that places code in a simple verbatim and prints "Input #"
+% and "Output #" cell prompts.
+
+((*- block in_prompt -*))
+\textbf{Input \#{}(((cell.prompt_number)))}
+((*- endblock in_prompt -*))
+
+((*- block input -*))
+\begin{verbatim}
+((( cell.input )))
+\end{verbatim}
+((*- endblock input -*))
+
+((*- block output_prompt -*))
+\textbf{Output \#{}(((cell.prompt_number)))}
+((*- endblock output_prompt -*))
