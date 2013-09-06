@@ -1,0 +1,45 @@
+((= Custom cell style
+    A notebook style output without prompts. =))
+
+% Inherit from the notebook style.  If you do not want to inherit from an 
+% existing cell style, you can inherit from latex_base.tplx.
+((*- extends 'style_notebook.tplx' -*))
+
+
+%===============================================================================
+% Custom style code, overrides style_notebook code
+%===============================================================================
+
+((* block definitions *))
+    ((( super() )))
+
+    % Define the environment which puts the frame
+    \renewenvironment{notebookcell}[0]{%
+      \def\FrameCommand{\notebookcellframe}%
+      \def\FirstFrameCommand{\notebookcellframetop}%
+      \def\LastFrameCommand{\notebookcellframebottom}%
+      \def\MidFrameCommand{\notebookcellframemiddle}%
+      \par\vspace{1\baselineskip}%
+      \MakeFramed {\FrameRestore}%
+      \noindent { } \par}%
+    {\endMakeFramed}
+
+    % Remove the left margin
+    \setlength{\cellleftmargin}{0pt}
+((* endblock definitions *))
+
+
+((* block input scoped *))
+\begin{notebookcell}%
+{\smaller%
+((( cell.input | highlight2latex )))}%
+\end{notebookcell}%
+((* endblock input *))
+
+
+((* block output -*))
+    {\smaller%
+    ((* block data_priority -*))
+        ((( super() )))
+    ((* endblock data_priority -*))}%
+((*- endblock output *))
