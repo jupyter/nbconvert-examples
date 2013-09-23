@@ -1,2 +1,2 @@
-def null_highlight_filter(input):
+def null_highlight_filter(input, **kwargs):
     return input
