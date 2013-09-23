@@ -4,6 +4,10 @@
 \author{Fernando Perez and Brian E. Granger}
 ((* endblock author *))
 
+((* block title *))
+\title{Tools for the lifecycle of computational research}
+((* endblock title *))
+
 ((* block bibliography *))
 \bibliographystyle{unsrt}
 \bibliography{ipython}
