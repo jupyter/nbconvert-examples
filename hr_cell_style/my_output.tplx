@@ -1,0 +1,6 @@
+
+% Tell the templating engine to use our cell style.
+((* set cell_style = 'style_hr.tplx' *))
+
+% Tell the templating engine what output template we want to use.
+((* extends 'latex_article.tplx' *))

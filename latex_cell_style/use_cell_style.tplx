@@ -1,5 +1,5 @@
 ((= This line selects the cell style. =))
-((* set cell_style = 'style_notebook.tplx' *))
+((* set cell_style = 'style_python.tplx' *))
 
 ((= This line inherits from the built in template that you want to use. =))
 ((* extends 'latex_article.tplx' *))
