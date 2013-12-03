@@ -3,7 +3,7 @@
 
 % Inherit from the notebook style.  If you do not want to inherit from an 
 % existing cell style, you can inherit from latex_base.tplx.
-((*- extends 'style_notebook.tplx' -*))
+((*- extends 'style_ipython.tplx' -*))
 
 
 %===============================================================================
@@ -13,33 +13,7 @@
 ((* block definitions *))
     ((( super() )))
 
-    % Define the environment which puts the frame
-    \renewenvironment{notebookcell}[0]{%
-      \def\FrameCommand{\notebookcellframe}%
-      \def\FirstFrameCommand{\notebookcellframetop}%
-      \def\LastFrameCommand{\notebookcellframebottom}%
-      \def\MidFrameCommand{\notebookcellframemiddle}%
-      \par\vspace{1\baselineskip}%
-      \MakeFramed {\FrameRestore}%
-      \noindent { } \par}%
-    {\endMakeFramed}
-
-    % Remove the left margin
-    \setlength{\cellleftmargin}{0pt}
+    % Custom prompts colors
+    \definecolor{incolor}{rgb}{0.0, 0.8, 0.0}
+    \definecolor{outcolor}{rgb}{0.65, 0.6, 0.0}
 ((* endblock definitions *))
-
-
-((* block input scoped *))
-\begin{notebookcell}%
-{\smaller%
-((( cell.input | highlight2latex )))}%
-\end{notebookcell}%
-((* endblock input *))
-
-
-((* block output -*))
-    {\smaller%
-    ((* block data_priority -*))
-        ((( super() )))
-    ((* endblock data_priority -*))}%
-((*- endblock output *))
