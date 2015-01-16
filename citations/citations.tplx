@@ -1,4 +1,4 @@
-((*- extends 'latex_article.tplx' -*))
+((*- extends 'article.tplx' -*))
 
 ((* block author *))
 \author{Fernando Perez and Brian E. Granger}
