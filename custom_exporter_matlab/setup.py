@@ -3,14 +3,12 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-with open('README.md', 'r') as f:
-    readme = f.read()
-
 setup(
     name='matlab_nbconvert',
     version='0.2',
     description='An exporter for matlab-based jupyter notebooks',
-    long_description=readme,
+    long_description="""An exporter that formats matlab files more neatly
+                        and produces sectioned code in .m files.""",
     url='https://github.com/janfreyberg/matlab_nbconvert',
     download_url='https://github.com/janfreyberg/matlab_nbconvert/tarball/0.2',
     # Author details

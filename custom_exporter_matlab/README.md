@@ -1,5 +1,3 @@
-[![PyPI version](https://badge.fury.io/py/matlab_nbconvert.svg)](https://badge.fury.io/py/matlab_nbconvert)
-
 # Example of a pypi package that creates a new exporter for nbconvert
 
 This is an exporter for `nbconvert` that turns matlab-notebooks into neatly formatted matlab (`.m`) files. The new exporter is included as an "entry point" so can be used directly by nbconvert.
@@ -21,28 +19,20 @@ mypackage
 Within `__init__.py`, you can define your custom exporter, which can use a custom template:
 
 ```
-# file __init__.py
 from traitlets import default
 from nbconvert.exporters.templateexporter import TemplateExporter
 import os.path
 
 """Matlab script Exporter class"""
 
-# Copyright (c) Jan Freyberg
-# Distributed under the terms of the MIT License.
-
-
 class MatlabExporter(TemplateExporter):
-    """
-    Exports a Python code file.
-    """
+    """Exports a matlab code file."""
 
     @default('file_extension')
     def _file_extension_default(self):
         return '.m'
 
-    template_path = ['.', os.path.join(os.path.dirname(__file__),
-                                       "templates")]
+    template_path = ['.', os.path.join(os.path.dirname(__file__), "templates")]
 
     @default('template_file')
     def _template_file_default(self):
@@ -69,7 +59,7 @@ You can include your custom template file, just like when you create a custom te
 {% endblock input %}
 
 {% block markdowncell scoped %}
-%%
+%% Markdowncell
 {{ cell.source | comment_lines(prefix='% ') }}
 {% endblock markdowncell %}
 ```
