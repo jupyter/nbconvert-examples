@@ -3,6 +3,6 @@
 The following Notebooks contain a tutorial and full example showing how to use this capability:
 
 * [Tutorial](http://nbviewer.ipython.org/urls/raw.github.com/ipython/nbconvert-examples/master/citations/Tutorial.ipynb)
-* [Full example](http://nbviewer.ipython.org/urls/raw.github.com/ipython/nbconvert-examples/master/citations/Tools%20for%20the%20lifecycle%20of%20computational%20research.ipynb)
+* [Full example](http://nbviewer.jupyter.org/github/jupyter/nbconvert-examples/blob/master/citations/LifecycleTools.ipynb)
 
-Here is the generated PDF of the example that shows how the references look in LaTeX: [download PDF](https://github.com/ipython/nbconvert-examples/raw/master/citations/Tools%20for%20the%20lifecycle%20of%20computational%20research.pdf)
+Here is the generated PDF of the example that shows how the references look in LaTeX: [download PDF](https://github.com/jupyter/nbconvert-examples/raw/master/citations/LifecycleTools.pdf)
